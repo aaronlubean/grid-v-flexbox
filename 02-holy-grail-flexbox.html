@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+    <style type="text/css">
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px 5px;
+        }
+
+        header {
+            flex: 1 1 100%;
+            background-color: darkgreen;
+        }
+
+        nav {
+            flex: 1 1 0;
+            background-color: darkblue;
+        }
+
+        article {
+            flex: 3 1 0;
+            background-color: darkgray;
+        }
+
+        aside {
+            flex: 1 1 0;
+            background-color: darkred;
+        }
+
+        footer {
+            flex: 1 1 100%;
+            background-color: darkorange;
+        }
+
+        header,
+        nav,
+        aside,
+        article,
+        footer {
+            margin: 5px;
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 36px;
+            color: white;
+        }
+
+
+        @media all and (max-width: 760px) {
+            aside {
+                flex: 1 1 100%;
+            }
+
+            article {
+                flex: 2 1 0;
+            }
+        }
+
+        @media all and (max-width: 540px) {
+
+            nav,
+            aside,
+            article {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <header>Header</header>
+        <nav>Nav</nav>
+        <article>Lucas ipsum dolor sit amet castell cabasshite skirata rotta moff wuher opress kitonak yoda mimbanite.
+            Organa even lahara boltrunians lepi barabel rancisis. Rakata zekk b4-d4 mace abyssin secura gorog sarn
+            panaka.
+            Tib kael zhell desann bibble. Asajj k-3po md-5 rugor hutt sullustan thrella lepi leia.</article>
+        <aside>Aside</aside>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+    <style type="text/css">
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "nav article aside"
+                "footer footer footer";
+            grid-template-columns: minmax(100px, 200px) minmax(400px, 1fr) minmax(100px, 200px);
+            grid-template-rows: min-content 1fr min-content;
+            grid-gap: 10px;
+            margin: 10px 10px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: darkgreen;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: darkblue;
+        }
+
+        article {
+            grid-area: article;
+            background-color: darkgray;
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: darkred;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: darkorange;
+        }
+
+        header,
+        nav,
+        aside,
+        article,
+        footer {
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 36px;
+            color: white;
+        }
+
+        @media all and (max-width: 760px) {
+            .grid-container {
+                grid-template-areas:
+                    "header header"
+                    "nav article"
+                    "aside aside"
+                    "footer footer";
+                grid-template-columns: minmax(100px, 200px) minmax(400px, 1fr);
+                grid-template-rows: repeat (4, min-content);
+            }
+        }
+
+        @media all and (max-width: 540px) {
+            .grid-container {
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "article"
+                    "aside"
+                    "footer";
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(5, min-content);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>Header</header>
+        <nav>Nav</nav>
+        <article>Lucas ipsum dolor sit amet castell cabasshite skirata rotta moff wuher opress kitonak yoda mimbanite.
+            Organa even lahara boltrunians lepi barabel rancisis. Rakata zekk b4-d4 mace abyssin secura gorog sarn
+            panaka.
+            Tib kael zhell desann bibble. Asajj k-3po md-5 rugor hutt sullustan thrella lepi leia.</article>
+        <aside>Aside</aside>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>

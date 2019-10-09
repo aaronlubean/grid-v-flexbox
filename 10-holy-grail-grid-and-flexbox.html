@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+<head>
+  <style type="text/css">
+    .grid-container {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-areas:
+        "header  header  header"
+        "nav     article aside"
+        "footer  footer  footer";
+      grid-template-rows: max-content 1fr max-content;
+      grid-template-columns: minmax(max-content, 300px) minmax(400px, 1fr) minmax(max-content, 300px);
+      margin: 10px;
+    }
+
+    header {
+      grid-area: header;
+      background-color: darkgreen;
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    header>a {
+      padding: 5px 10px;
+      margin: 5px;
+      border-radius: 3px;
+      background-color: lightgreen;
+    }
+
+    nav {
+      grid-area: nav;
+      background-color: darkblue;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    nav a {
+      padding: 5px 10px;
+      margin: 5px;
+      border-radius: 3px;
+      background-color: lightblue;
+    }
+
+    aside {
+      grid-area: aside;
+      background-color: darkred;
+    }
+
+    article {
+      grid-area: article;
+      background-color: darkgray;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: darkorange;
+    }
+
+    header,
+    nav,
+    aside,
+    article,
+    footer {
+      border-radius: 4px;
+      padding: 10px;
+      font-size: 36px;
+      color: white;
+    }
+
+    @media all and (max-width: 760px) {
+      .grid-container {
+        grid-template-areas:
+          "header header"
+          "nav article"
+          "aside aside"
+          "footer footer";
+        grid-template-columns: minmax(100px, 200px) minmax(400px, 1fr);
+        grid-template-rows: repeat (4, min-content);
+      }
+    }
+
+    @media all and (max-width: 540px) {
+      .grid-container {
+        grid-template-areas:
+          "header"
+          "nav"
+          "article"
+          "aside"
+          "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, min-content);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <header>
+      <a>Luke</a><a>Han</a><a>Leia</a><a>Chewbacca</a><a>C-3P0</a><a>R2-D2</a><a>Rey</a><a>Kylo Ren</a>
+    </header>
+    <nav>
+      <a>X-wing</a><a>TIE Fighter</a><a>Slave I</a><a>P-38</a><a>CR90</a><a>Death Star</a>
+    </nav>
+    <aside>Aside</aside>
+    <article>Lucas ipsum dolor sit amet farlax terentatek feeorin dexter joruus antilles brak bossk natasi piell.
+      Ansionian luke amanin moff kashyyyk zann. Obi-wan quermian nal skywalker yoda. Mothma biggs terrik endor k-3po
+      yuzzem. Farlax zabrak shadda felucia ismaren kaminoan. Hutt priapulin moff zeltron raa secura darth. Paploo
+      palpatine tion himoran hapes. Hutt padmé chazrach dooku sal-solo illum senex antemeridian. Gado rodian jax watto
+      cassio garindan defel sarn. Sith auril quence saffa khai massans skakoan.</article>
+    <footer>Footer</footer>
+  </div>
+
+</body>
+
+</html>
